@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validate form</title>
+    <title>MY SHOE STORE </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link
       rel="stylesheet"
@@ -18,20 +18,20 @@
 
     <div class="container" id="container">
       <div class="form-container register-container">
-        <form>
+        <form action ="/signup" method="post">
           <h1>Register here</h1>
           <div class="form-control">
-            <input type="text" id="username" placeholder="Name" />
+            <input type="text" id="username" name="username" placeholder="Name" />
             <small id="username-error"></small>
             <span></span>
           </div>
           <div class="form-control">
-            <input type="email" id="email" placeholder="Email" />
+            <input type="email" id="email" name="email" placeholder="Email" />
             <small id="email-error"></small>
             <span></span>
           </div>
           <div class="form-control">
-            <input type="password" id="password" placeholder="Password" />
+            <input type="password" id="password" name="password" placeholder="Password" />
             <small id="password-error"></small>
             <span></span>
           </div>
@@ -48,7 +48,7 @@
       </div>
 
       <div class="form-container login-container">
-        <form class="form-lg">
+        <form class="form-lg"  action="/login" method="post">
           <h1>Login here.</h1>
           <div class="form-control2">
             <input type="email" class="email-2" placeholder="Email" />

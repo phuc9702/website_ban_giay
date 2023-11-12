@@ -3,12 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var collection = require("./routes/config")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 
+app.use(express.json())
+app.use(express.urlencoded({extended :  false}))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -38,4 +41,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.get('/', (req, res) => {
+  res.render("login");
+});
+
+app.get('/', (req, res) => {
+  res.render("signup");
+});
 module.exports = app;
